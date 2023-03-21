@@ -4,9 +4,9 @@
 */
 void print_alphabet_x10(void)
 {
-	int line, a;
+	int b, a;
 
-	for (line = 0; line <= 9; line++)
+	for (b = 0; b <= 9; b++)
 	{
 		for (a = 'a'; a <= 'z'; a++)
 			_putchar(a);
