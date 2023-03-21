@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _isalpha - checks if charcter is a letter
- * both lowercase or uppercase
+ *_isalpha - checks if charcter is a letter
+ *            both lowercase or uppercase
  * @c: takes input from other functions.
  * Return : 1 is c if true elsr 0
 */
