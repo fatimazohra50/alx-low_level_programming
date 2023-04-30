@@ -15,7 +15,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	while (li < (n))
 	{
-		printf("%s", va_arg(se, char *));
+		if (*separator == NULL)
+			printf("(nil");
+		else
+			printf("%s", va_arg(se, char *));
 
 		if (separator != NULL && li != (n - 1))
 		{
