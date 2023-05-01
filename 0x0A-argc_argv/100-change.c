@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 				}
 			}
 		}
-		printf("%d|n", le);
+		printf("%d\n", le);
 	}
 	else
 	{
