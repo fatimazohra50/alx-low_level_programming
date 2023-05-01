@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -9,17 +9,16 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1 = 0, num2 = 0;
+	int num1 = 0;
 
 	if (argc == 3)
 	{
-		num1= _atoi(argv[1]);
-		num2= _atoi(argv[2]);
-		printf("%d\n", num1 * num2);
+		num1 = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", num1);
 	}
 	else
 	{
-	        printf("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 	return (0);
