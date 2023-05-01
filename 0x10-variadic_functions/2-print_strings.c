@@ -1,3 +1,4 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 /**
@@ -15,11 +16,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	while (li < (n))
 	{
-		if (*separator == NULL)
-			printf("(nil");
+		if (separator == NULL)
+		{
+			printf("(nil)");
+		}
 		else
+		{
 			printf("%s", va_arg(se, char *));
-
+		}
 		if (separator != NULL && li != (n - 1))
 		{
 			printf("%s", separator);
