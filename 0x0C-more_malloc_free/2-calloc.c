@@ -9,11 +9,13 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *t = s;
+	unsigned int i;
 
-	while (n--)
-		*s++ = b;
-	return (t);
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
 }
 /**
  * _calloc - allocates memory for an array, using malloc.
@@ -23,13 +25,13 @@ char *_memset(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *a;
+	char *a;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
 	a = malloc(sizeof(int) * nmemb);
 	if (a == NULL)
 		return (NULL);
-	_memset(a, 0, sizeof(int) * nmemb);
+	_memset(a, 0, sizeof(int) * size);
 	return (a);
 }
