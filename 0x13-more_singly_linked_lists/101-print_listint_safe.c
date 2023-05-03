@@ -17,14 +17,14 @@ const listint_t **_r(const listint_t **lust, size_t size, const listint_t *new)
 	ne = malloc(size * sizeof(listint_t));
 	if (ne == NULL)
 	{
-		free(list);
+		free(lust);
 		exit(98);
 	}
 	for (i = 0; i < size - 1; i++)
-		ne[i] = list[i];
+		ne[i] = lust[i];
 	ne[i] = new;
-	free(list);
-	return (me);
+	free(lust);
+	return (ne);
 }
 /**
  * print_listint_safe - prints a listint_t linked list.
@@ -34,7 +34,7 @@ const listint_t **_r(const listint_t **lust, size_t size, const listint_t *new)
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i, m = 0;
-	const listint_t **l = NULL;
+	const listint_t **list = NULL;
 
 	while (head != NULL)
 	{
