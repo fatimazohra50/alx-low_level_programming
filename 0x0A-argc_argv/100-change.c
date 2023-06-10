@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdib.h>
+#include <stdlib.h>
 /**
  * main - prints the minimum number of coins to
  *        make change for an amount of money.
@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
 			if (m >= c[i])
 			{
 				l += m / c[i];
-				m = (m % c[i] == 0)
+				m = m % c[i];
+				if (m % c[i] == 0)
 				{
 					break;
 				}
