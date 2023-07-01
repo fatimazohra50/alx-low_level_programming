@@ -34,5 +34,5 @@ int su_them_all(int n, int s)
 	else
 	{
 		return 1;
-	}
 }
+

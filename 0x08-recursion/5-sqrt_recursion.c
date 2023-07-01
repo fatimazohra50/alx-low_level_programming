@@ -2,6 +2,7 @@
 /**
  * _sqrt_recursion - find natural square root
  * @n: int
+ * @s: square root
  * Return: int
  */
 int sum_them_all(int n, int s);
