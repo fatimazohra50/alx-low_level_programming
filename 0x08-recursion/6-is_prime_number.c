@@ -29,10 +29,10 @@ int su_them_all(int n, int s)
 	}
 	if (s * s < n)
 	{
-		(su_them_all(n, s + 1));
+		return (su_them_all(n, s + 1));
 	}
 	else
 	{
-		return 1;
+		return (1);
+	}
 }
-
