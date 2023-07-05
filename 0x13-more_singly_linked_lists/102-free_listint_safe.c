@@ -43,7 +43,7 @@ size_t free_listint_safe(listint_t **h)
 		next = (*h)->next;
 		if (*h == loopnode && loop)
 		{
-			if (loopnode && loopnode->next)
+			if (loopnode == loopnode->next)
 			{
 				free(*h);
 				break;
