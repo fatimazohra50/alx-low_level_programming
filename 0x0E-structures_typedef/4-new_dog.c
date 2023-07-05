@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#ionclude "dog.h"
+#include "dog.h"
 /**
  * _strlen - a function that gets a length of string
  * @str: the string to get the length
@@ -14,12 +14,12 @@ int _strlen(const char *str)
 	return (length);
 }
 /**
- * _strcop - a function that returns @de with a copy of a string from @src
+ * _strcopy - a function that returns @de with a copy of a string from @src
  * @src: string to copy
  * @dest: copy string to here
  * Return: @dest
  */
-char *_strcop(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i;
 
@@ -57,8 +57,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	dog->name = _strcop(dog->name);
+	dog->name = _strcopy(dog->name, name);
 	dog->age = age;
-	dog->owner = _strcop(dog->owner, owner);
+	dog->owner = _strcopy(dog->owner, owner);
 	return (dog);
 }
