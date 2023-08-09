@@ -20,7 +20,7 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int sizel, size2, i;
+	int size1, size2, i;
 	char *m;
 
 	if (s1 == NULL)
@@ -30,16 +30,16 @@ char *str_concat(char *s1, char *s2)
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);
-	m = malloc((sizel + suze2) * sizeof(char) + 1);
+	m = malloc((size1 + size2) * sizeof(char) + 1);
 	if (m == 0)
 		return (0);
 
-	for (i = 0; i <= sizel + suze2; i++)
+	for (i = 0; i <= size1 + size2; i++)
 	{
 		if (i < size1)
 			m[i] = s1[i];
 		else
-			m[i] = s2[i - sizel];
+			m[i] = s2[i - size1];
 	}
 	m[i] = '\0';
 	return (m);
