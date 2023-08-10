@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 		return (1);
 	for (i = 0; i <= l1 + l2; i++)
 		r[i] = 0;
-	for (l1 = l1 - 1; l1 >= 0; i--)
+	for (l1 = l1 - 1; l1 >= 0; l1--)
 	{
 		d1 = s1[l1] - '0';
 		c = 0;
@@ -83,11 +83,11 @@ int main(int argc, char *argv[])
 			if (r[i])
 				b = 1;
 			if (b)
-				putchar(r[i] + '0');
+				_putchar(r[i] + '0');
 		}
 		if (!b)
-			putchar('0');
-		putchar('\n');
+			_putchar('0');
+		_putchar('\n');
 		free(r);
 		return (0);
 }
