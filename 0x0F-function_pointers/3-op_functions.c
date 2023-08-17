@@ -29,7 +29,6 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
-}
 /**
  * op_div - divides two integers
  * @a: the first int
@@ -50,4 +49,3 @@ int op_mod(int a, int b)
 {
 	return (a % b);
 }
-
